@@ -130,15 +130,16 @@ public class Teste_Pratico_Iniflex {
         }
         
         ///3.3 Imprimindo os funcionarios
-        System.out.println("\n");
+        System.out.println("Imprimindo os funcionários pós remoção do João\n");
         Funcionarios.forEach(System.out::println); ///printando a planilha
+        
         ///3.4 Aumento salario
         Funcionarios.forEach((salarioFunc) -> {
             BigDecimal salarioNovo = salarioFunc.getSalario().multiply(new BigDecimal("1.10")); ///retorna salario multiplicando por 1.10
             salarioNovo = salarioNovo.setScale(2,RoundingMode.HALF_UP);
             salarioFunc.setSalario(salarioNovo); /// atualiza Salario com o novo salario.
         });
-        System.out.println("\n");
+        System.out.println("Imprimindo pós aumento no salário de 10%.\n");
         Funcionarios.forEach(System.out::println); ///printando a planilha
         
         ///3.5
